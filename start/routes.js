@@ -11,6 +11,7 @@ Route.post('forgot-password', 'ForgotPasswordController.store')
 
 Route.group( () => {
   Route.resource('professors', 'ProfessorController').apiOnly()
+  Route.resource('orientacoes', 'OrientacaoController').apiOnly()
 
 }).middleware([ 'auth'])
 

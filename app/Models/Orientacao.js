@@ -5,7 +5,7 @@ const Model = use('Model')
 class Orientacao extends Model {
 
   professor (){
-    return this.HasOne('App/Models/Professor')
+    return this.hasOne('App/Models/Professor')
   }
 
 }

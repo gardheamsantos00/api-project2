@@ -32,9 +32,10 @@ class OrientacaoController {
    */
   async store ({ request, response }) {
 
-    const dados = request.only([ 'nome', 'descricao', 'professor' ])
+    const  dados  = request.only([ 'nome', 'descricao', 'professor_id' ])
 
-    const orientacao = await Orientacao.create({ dados })
+    const orientacao = await Orientacao.create(dados)
+
 
     return orientacao
   }
