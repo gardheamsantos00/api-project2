@@ -5,7 +5,7 @@ const Model = use('Model')
 class Orientacao extends Model {
 
   professor (){
-    return this.hasOne('App/Models/Professor')
+    return this.belongsTo('App/Models/Professor')
   }
 
 }
