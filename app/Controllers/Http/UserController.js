@@ -1,6 +1,8 @@
 'use strict'
 
 const User = use('App/Models/User')
+const Professor = use('App/Models/Professor')
+
 
 class UserController {
   async store({ request }) {
@@ -10,6 +12,15 @@ class UserController {
 
     return user
   }
+
+  async index ({ request, response, view }) {
+
+    const professor = await Professor.all()
+
+    return professor
+
+  }
+
 }
 
 module.exports = UserController
